@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include  # include is required
+from django.urls import path, include
 
 urlpatterns = [
     path('api/', include('api.urls')),

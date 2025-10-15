@@ -8,7 +8,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = []
 
-# Application definition
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -17,10 +16,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "django.middleware.common.CommonMiddleware",  # handles URL slashes and common headers
+    "django.middleware.common.CommonMiddleware",
 ]
 
-ROOT_URLCONF = "api.urls"  # points to your project-level urls.py
+ROOT_URLCONF = "api.urls"
 
 TEMPLATES = [
     {
