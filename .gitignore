@@ -1,0 +1,4 @@
+backend/src/.env
+backend/venv
+backend/src/api/__pycache__
+backend/src/api/services/__pycache__
