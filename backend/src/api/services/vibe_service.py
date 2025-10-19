@@ -1,7 +1,7 @@
 from transformers import pipeline
 import requests
 from decouple import config
-from .vibe_service_utils import filter, run_sentiment_analysis, summarise_analysed_posts
+from .vibe_service_utils import filter_comments, run_sentiment_analysis, summarise_analysed_posts
 
 _sentiment_model = None
 
@@ -55,7 +55,7 @@ def fetch_reddit_posts(topic, limit_posts=10, limit_comments=20):
 
         all_comments.extend(post_comments) 
 
-    return filter(all_comments)
+    return filter_comments(all_comments)
 
 def analyze_posts(posts):
     sentiment_model = get_model()

@@ -18,7 +18,6 @@ def vibe_check(request):
 
     posts = fetch_reddit_posts(topic)
     analyzed = analyze_posts(posts)
-    summary = summarise_vibes(analyzed)
+    summary = summarise_vibes(analyzed, topic)
 
     return Response(summary, status=status.HTTP_200_OK)
-
