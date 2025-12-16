@@ -106,7 +106,7 @@ def summarise_analysed_posts(analysed, topic, top_n=10):
     return {
         "avg_sentiment": round(avg_sentiment, 2),
         "breakdown": counts,
-        "posts_analyzed": total,
+        "posts_analysed": total,
         "relevant_comments": relevant_comments,
         "timestamp": datetime.now().isoformat(),
         "vibe": vibe,

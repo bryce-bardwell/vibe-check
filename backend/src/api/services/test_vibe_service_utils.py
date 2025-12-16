@@ -51,7 +51,7 @@ def test_summarise_analysed_posts_empty(mock_relevant):
 
     assert result["vibe"] == "neutral"
     assert result["avg_sentiment"] == 0.0
-    assert result["posts_analyzed"] == 0
+    assert result["posts_analysed"] == 0
     assert result["breakdown"] == {"positive": 0, "negative": 0, "neutral": 0}
 
     mock_relevant.assert_not_called()
@@ -70,7 +70,7 @@ def test_summarise_analysed_posts_positive(mock_relevant):
     assert result["vibe"] == "positive"
     assert result["avg_sentiment"] > 0
     assert result["avg_sentiment"] == pytest.approx(expected_avg, rel=0.01)
-    assert result["posts_analyzed"] == 3
+    assert result["posts_analysed"] == 3
     assert set(result["breakdown"].keys()) == {"positive", "negative", "neutral"}
     assert isinstance(datetime.fromisoformat(result["timestamp"]), datetime)
 
